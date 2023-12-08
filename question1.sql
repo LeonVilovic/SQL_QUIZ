@@ -1,20 +1,15 @@
---Is there a difference between these two SQL statments :
+--Is there a difference between these two SQL batches :
 
---statment1--------------------
+--batch_1--------------------
 while exists ( select 1 from Orders where CustId = 1 ) 
 delete top(1) from Orders where CustId = 1; 
---------------------
+-----------------------------
 
---statment2--------------------
+--batch_2--------------------
 delete from Orders where CustId = 1; 
---------------------
+-----------------------------
 
---a) YES statment2 deletes all rows from Orders where CustId = 1 and  statment1 deletes only one row from Orders where CustId = 1
---b) NO statments are funcionally same
---c) YES statment1 is with a syntax error and will not work  
---d) YES statments are funcionally same, but statment2 can potentially create a large transaction that can be difficult to handle
-
-
-
-
---CORRECT ANSWER : d)
+--A) YES batch_2 deletes all rows from Orders where CustId = 1 and batch_1 deletes only one row from Orders where CustId = 1
+--B) NO batches are funcionally same
+--C) YES batch_1 has a syntax error and will raise an error  
+--D) YES batches are funcionally same, but batch_2 can potentially create a large transaction that can be difficult to handle
