@@ -10,6 +10,6 @@ delete from Orders where CustId = 1;
 -----------------------------
 
 --A) YES batch_2 deletes all rows from Orders where CustId = 1 and batch_1 deletes only one row from Orders where CustId = 1
---B) NO batches are funcionally same
+--B) NO batches are functionally same
 --C) YES batch_1 has a syntax error and will raise an error  
---D) YES batches are funcionally same, but batch_2 can potentially create a large transaction that can be difficult to handle
+--D) YES batches are functionally same, but batch_2 can potentially create a large transaction that can be difficult to handle
