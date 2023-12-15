@@ -35,6 +35,6 @@ JOIN #Departments D ON E.DepartmentID = D.DepartmentID
 WHERE Salary > (SELECT AVG(Salary) FROM #Employees WHERE DepartmentID = E.DepartmentID);
 
 --A) The code will raise an error 
---B) Result set: Emily	IT	68200.000, Michael	HR	77000.000
+--B) Result set: Emily IT 68200.000, Michael HR 77000.000
 --C) Empty result set.
---D) Result set:  Michael	HR	77000.000
+--D) Result set: Michael HR 77000.000
