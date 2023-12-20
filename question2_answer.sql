@@ -35,7 +35,7 @@ EXEC SP_EXECUTESQL @SQL;
 
 
 -- CORRECT ANSWER : B) Jane Smith. 
--- Commened lines are also ignored inside dynamic SQL string so DELETE statement will not execute. Since the SELECT statement 
--- has the keyword TOP 1 only one record will be returned and because of the ORDER BY EmployeeID clause, first returned row 
--- is a string with value ‘Jane Smith’. 
+-- Commented lines are also ignored inside dynamic SQL string so DELETE statement will not execute. Since the SELECT statement
+-- has the keyword TOP 1 only one record will be returned and because of the ORDER BY EmployeeID clause, only returned row 
+-- is a string with value ‘Jane Smith’.
 -- NOTE: putting comments inside dynamic SQL strings is not considered a good practice.
