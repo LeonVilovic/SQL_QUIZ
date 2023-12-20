@@ -32,4 +32,15 @@ HAVING count(EmployeeID) > 1
 
 
 
--- CORRECT ANSWER : B) Result set: R: 1 D: 2023-01-10 R: 2 D: 2023-02-11 , R: 3 D: 2024-07-05 R: 4 D: 2020-05-02 
+-- CORRECT ANSWER : B) Result set: R: 1 D: 2023-01-10 R: 2 D: 2023-02-11 , R: 3 D: 2024-07-05 R: 4 D: 2020-05-02
+-- Only requests where EmployeeID is 1 or 2 are shown because of HAVING clause with condition count(EmployeeID) > 1 
+-- FOR XML clause is used for displaying row data in a form of an xml document, but in our case we use it to
+-- concatenate multiple rows from a subquery into a string. Here is a common variation of this method used to create
+-- comma-separated concatenated rows that combines FOR XML PATH('') and STUFF:
+--   SELECT
+--       STUFF((
+--       SELECT ',' + Name
+--       FROM temp FOR XML PATH('')
+--       ), 1, 1, '')
+--   FROM temp
+-- In the case above STUFF is used to remove the first comma in the string.
