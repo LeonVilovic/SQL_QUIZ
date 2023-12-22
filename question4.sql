@@ -6,7 +6,7 @@ CREATE TABLE #Temp (
 
 INSERT INTO #Temp
 VALUES
-    (1),(2),(3),(4);
+    (4),(3),(2),(1);
 
 SELECT TOP 1 * FROM #Temp
 ORDER BY NEWID()
