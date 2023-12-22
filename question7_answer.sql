@@ -43,4 +43,6 @@ HAVING count(EmployeeID) > 1
 --       FROM temp FOR XML PATH('')
 --       ), 1, 1, '')
 --   FROM temp
--- In the case above STUFF is used to remove the first comma in the string.
+-- In the case above STUFF is used to remove the first comma in the string. In the versions of SQL Server released
+-- after 2017 you can simply use STRING_AGG function, but when you have to use an older server version FOR XML 
+-- clause should be used.
