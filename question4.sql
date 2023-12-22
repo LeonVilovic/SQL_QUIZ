@@ -9,7 +9,7 @@ VALUES
     (4),(3),(2),(1);
 
 SELECT TOP 1 * FROM #Temp
-ORDER BY NEWID()
+ORDER BY NEWID();
 
 
 --A) Result set: 1
