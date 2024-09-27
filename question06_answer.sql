@@ -9,7 +9,7 @@ CREATE TABLE #Employee (
     Salary DECIMAL(10, 2)
 );
 
-INSERT INTO #Employee (EmployeeID,FirstName, LastName, DateOfBirth, Department, Salary)
+INSERT INTO #Employee (EmployeeID, FirstName, LastName, DateOfBirth, Department, Salary)
 VALUES
     (1, 'John', 'Doe', '1990-05-15', 'IT', 60000.00),
     (2, 'Jane', 'Smith', '1985-08-22', 'HR', 55000.00),
